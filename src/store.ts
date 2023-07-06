@@ -40,6 +40,13 @@ class Store {
     makeAutoObservable(this);
   }
 
+  load(url: string) {
+    fetch(url)
+      .then((resp) => resp.json())
+      .then((data: Todo[]) => (store.todos = data))
+      .catch((err) => console.log(err));
+  }
+
   addTodo() {
     this.todos = addTodo(this.todos, this.newTodo);
     this.newTodo = "";
