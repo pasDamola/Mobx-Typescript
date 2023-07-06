@@ -9,7 +9,7 @@ function TodoListItems() {
         <Flex pt={2} key={todo.id}>
           <Checkbox />
           <Input mx={2} value={todo.text} />
-          <Button>Delete</Button>
+          <Button onClick={() => store.removeTodo(todo.id)}>Delete</Button>
         </Flex>
       ))}
     </>
