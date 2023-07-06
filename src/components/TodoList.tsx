@@ -1,7 +1,7 @@
 import { Button, Input, Flex, Checkbox, Heading } from "@chakra-ui/react";
 import { observer } from "mobx-react";
-
 import store from "../store";
+
 function TodoListItems() {
   return (
     <>
